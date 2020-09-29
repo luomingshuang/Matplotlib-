@@ -23,3 +23,9 @@ def plot_history(history):
   plt.show()
 print(history)
 plot_history(history)
+
+error = test_predictions - test_labels
+print(error)
+plt.hist(error, bins=25)
+plt.xlabel('Prediction Error [MPG]')
+_ = plt.ylabel('Count')
